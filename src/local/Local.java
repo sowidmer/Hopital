@@ -1,6 +1,6 @@
-package locaux;
+package local;
 
-public class Locaux {
+public class Local {
   
   int no;
   String nom;
@@ -9,7 +9,7 @@ public class Locaux {
   int etage;
   int nbrFenetre;
   int nbrTable;
-  int m2;
+  int surface;
   
   
   public int getNo() {
@@ -54,11 +54,11 @@ public class Locaux {
   public void setNbrTable(int nbrTable) {
     this.nbrTable = nbrTable;
   }
-  public int getM2() {
-    return m2;
+  public int getSurface() {
+    return surface;
   }
-  public void setM2(int m2) {
-    this.m2 = m2;
+  public void setSurface(int surface) {
+    this.surface = surface;
   }
   
   

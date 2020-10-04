@@ -1,18 +1,26 @@
-package hopital;
+package personnes;
 
 public class Personne {
   int no;
   String nom;
+  String prenom;
   String adresse;
   String dateNaissance;
   String telephone;
   String email;
+
   
   public int getNo() {
     return no;
   }
   public void setNo(int no) {
     this.no = no;
+  }
+  public String getPrenom() {
+    return prenom;
+  }
+  public void setPrenom(String prenom) {
+    this.prenom = prenom;
   }
   public String getNom() {
     return nom;

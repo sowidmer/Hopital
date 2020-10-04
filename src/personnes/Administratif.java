@@ -4,6 +4,7 @@ public class Administratif extends Personne {
   
   String service;
   String specialite;
+  
   public String getService() {
     return service;
   }

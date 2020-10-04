@@ -1,9 +1,11 @@
-package locaux;
+package local;
 
-public class Restaurant extends Locaux{
+public class Restaurant extends Local{
   
   int noResponsable;
   String responsable;
+  
+  
   public int getNoResponsable() {
     return noResponsable;
   }

@@ -1,9 +1,11 @@
-package locaux;
+package local;
 
-public class Chambre extends Locaux {
+public class Chambre extends Local {
   
   int nbrLits;
   boolean prive;
+  
+  
   public int getNbrLits() {
     return nbrLits;
   }

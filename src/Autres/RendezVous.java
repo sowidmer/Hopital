@@ -9,6 +9,7 @@ public class RendezVous {
   int noImmeuble;
   int noService;
   int noMedecin;
+  
   public int getNo() {
     return no;
   }
