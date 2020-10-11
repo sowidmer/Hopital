@@ -1,8 +1,13 @@
 package personnes;
 
-public class Infirmier extends PersonnelMedical {
-   
- 
-  
+import misc.PatientException;
+
+public final class Infirmier extends PersonnelMedical {
+
+  public Infirmier(int no, String nom, String prenom, String adresse,
+      String dateNaissance, String telephone, String email, String specialite) throws PatientException {
+    super(no, nom, prenom, adresse, dateNaissance, telephone, email, specialite);
+
+  }
 
 }
