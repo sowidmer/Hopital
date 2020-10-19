@@ -3,12 +3,20 @@ import javax.swing.text.html.HTML;
 import horaires.HoraireTravail;
 import personnes.Patient;
 import local.Chambre;
+import Autres.Medicament;
 import Soins.Operation;
 import misc.*;
 
 public class mainHopital {
   
   public static void main(String[] args) throws Exception {   
+    
+    // Medicaments
+    
+    Medicament medic = new Medicament(1,"a","a","injection","Nausées");
+    medic.afficherMedicament(3);
+    //medic.afficherMedicament(12);
+    medic.listerMedicaments();
    
         
    //nouveau patient
@@ -34,7 +42,7 @@ public class mainHopital {
     }    
     
     finally {
-      System.out.println("Taf");
+      System.out.println("Finally de Exception sur la date");
    
     }    
     
@@ -92,8 +100,12 @@ public class mainHopital {
       } 
     
     HoraireTravail ht1 = new HoraireTravail(1,240,"01/10/2020","08:00","10:15","13:00","18:25");
-    System.out.println("Le nombre de minutes travaillées est: " + ht.nbrHeuresTravaillees());
-    
-  }   
+    System.out.println("Le nombre de minutes travaillées est: " + ht1.nbrHeuresTravaillees());
+       
+  
+ 
+  
+  
+  } 
 
 }
