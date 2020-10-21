@@ -15,7 +15,7 @@ public class mainHopital {
     
     Medicament medic = new Medicament(1,"a","a","injection","Nausées");
     medic.afficherMedicament(3);
-    //medic.afficherMedicament(12);
+    medic.afficherMedicament1(12);
     medic.listerMedicaments();
    
         

@@ -3,7 +3,7 @@ package Autres;
 import misc.PatientException;
 import misc.TableauException;
 
-public class Medicament  {
+public class Medicament extends Exception  {
 
   private int no;
   private String nom;
@@ -31,11 +31,23 @@ public class Medicament  {
     }
   }  
   
+  public void afficherMedicament1(int noMedic){
+    
+    try{
+      System.out.println("le medicament est: " + listeMedicament[noMedic]);
+      
+    }
+    catch(Exception te1){
+      System.out.println("Une exception a été levée");
+      return;
+    }
+  }
+  
   public void listerMedicaments(){
     
       for(int i=0; i< listeMedicament.length; i++) { 
         System.out.println(listeMedicament[i]) ;
-      }     
+       }
   }
   
 
