@@ -6,10 +6,10 @@ import java.util.Date;
 
 public final class HoraireTravail extends Horaire {
 
-  public HoraireTravail(int no, int noEmploye, String dateJour,
+  public HoraireTravail(int no, int noEmploye, String dateJour, String dateDebut, String dateFin,
       String debutMatin, String finMatin, String debutApresMidi,
       String finApresMidi) {
-    super(no, noEmploye, dateJour, debutMatin, finMatin, debutApresMidi,
+    super(no, noEmploye, dateJour, dateDebut, dateFin, debutMatin, finMatin, debutApresMidi,
         finApresMidi);
   }
 

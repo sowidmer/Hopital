@@ -9,9 +9,11 @@ public class Medicament extends Exception  {
   private String nom;
   private String composition;
   private String formeGalenique;
-  private String effetSecondaire;
-  private String[] listeMedicament = {"Aspirine", "Paracetamol", "Dafalgan", "Panadol","Alcacyl"};
+  private String effetSecondaire;  
+  
+  private String[] listeMedicament = {"Aspirine", "Paracetamol", "Dafalgan", "Panadol","Alcacyl"};// tableau de medicaments
 
+  //constructeur
   public Medicament(int no, String nom, String composition, String formeGalenique, String effetSecondaire)  {
     this.no = no;
     this.nom = nom;
@@ -20,6 +22,7 @@ public class Medicament extends Exception  {
     this.effetSecondaire = effetSecondaire;   
   }
   
+  // méthode qui affiche un médicament précis à une position demandée avec un exception personnalisée TableauException - appel depuis le main
   public void afficherMedicament(int noMedic) throws TableauException{
     System.out.println(listeMedicament.length + " = nombre de médicaments dans la liste");
     
@@ -31,18 +34,23 @@ public class Medicament extends Exception  {
     }
   }  
   
-  public void afficherMedicament1(int noMedic){
+//méthode qui affiche un médicament précis à une position demandée avec un exception générale + try catch - appel depuis le main
+  public void afficherMedicament1(int noMedic) throws TableauException{
     
     try{
+      
       System.out.println("le medicament est: " + listeMedicament[noMedic]);
       
     }
-    catch(Exception te1){
-      System.out.println("Une exception a été levée");
-      return;
+    catch(IndexOutOfBoundsException te1){
+      
+      System.out.println("Une exception a été levée") ;
+      throw new TableauException("Pas de medicament");      
     }
   }
   
+  
+  // méthode qui liste les médicaments pas besoin d'exception - appel depuis le main
   public void listerMedicaments(){
     
       for(int i=0; i< listeMedicament.length; i++) { 

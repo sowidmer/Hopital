@@ -12,19 +12,24 @@ public abstract class Local {
   private int nbrFenetre;
   private int nbrTable;
   private int surface;
+  
+  
+  public Local(int no, String nom, String genre){
+    this.no = no;
+    this.nom = nom;
+    this.genre = genre;    
+  }
 
   public Local(int no, String nom, String genre, int noImmeuble, int etage,
       int nbrFenetre, int nbrTable, int surface) {
-    this.no = no;
-    this.nom = nom;
-    this.genre = genre;
+    this(no,nom,genre);
     this.noImmeuble = noImmeuble;
     this.etage = etage;
     this.nbrFenetre = nbrFenetre;
     this.nbrTable = nbrTable;
     this.surface = surface;
-  }
-
+  }  
+  
   public int getNo() {
     return no;
   }
