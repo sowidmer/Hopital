@@ -12,10 +12,15 @@ public class Medicament extends Exception  {
   private String effetSecondaire;  
   
   private String[] listeMedicament = {"Aspirine", "Paracetamol", "Dafalgan", "Panadol","Alcacyl"};// tableau de medicaments
+  
+  public Medicament(int no, String nom){
+    this.no = no;
+    this.nom = nom; 
+  }
 
   //constructeur
   public Medicament(int no, String nom, String composition, String formeGalenique, String effetSecondaire)  {
-    this.no = no;
+    this(no,nom);
     this.nom = nom;
     this.composition = composition;
     this.formeGalenique = formeGalenique;

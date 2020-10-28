@@ -8,6 +8,7 @@ public class Service {
   private String genre;
   private int noImmeuble;
   private int etage;
+  
   private ArrayList<String> ServicesListe;
 
   public Service(int no, String genre, int noImmeuble, int etage) {

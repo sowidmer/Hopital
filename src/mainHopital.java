@@ -1,11 +1,10 @@
-import javax.swing.text.html.HTML;
-
 import horaires.HoraireTravail;
 import horaires.HorairePause;
 import personnes.Patient;
 import local.Chambre;
 import Autres.Medicament;
 import Autres.Service;
+import Autres.StockMedicaments;
 import Soins.Operation;
 import local.Salle;
 import local.Restaurant;
@@ -13,20 +12,66 @@ import local.InterfaceRestaurant;
 import local.RestaurantSalle;
 import misc.*;
 
-public class mainHopital {
+public class mainHopital { 
   
-  public static void main(String[] args) throws Exception {   
+  
+  public static int i;  
+  private static int compteur = 0;
+  
+  
+  public static void main(String[] args) throws Exception {  
+    
+    mainHopital chablais = new mainHopital();
+    mainHopital ehnv = new mainHopital();
+    mainHopital hug = new mainHopital();
+    
+    String newLine = System.getProperty("line.separator");
+    
+    //liste de Medicaments - Stock de médicaments
+    System.out.println("***Stock de Medicaments");
+        
+    Medicament m1,m2,m3,m4,m5;
+    
+     m1 = new Medicament(1,"Alcacyl");
+     m2 = new Medicament(2,"Panadol");
+     m3 = new Medicament(3,"Paracetamol");
+     m4 = new Medicament(4,"Dafalgan");
+     m5 = new Medicament(5,"Xylophone");
+     
+     Medicament[] medic = {m1,m2,m3,m4};
+    
+     StockMedicaments stm = new StockMedicaments(medic);
+     
+     stm.addMedicament(m5); 
+     
+     System.out.print((i = stm.niveauStock()) + " = niveau du stock de médicaments 1");  
+     
+      
+     stm.removeMedicament(m4);
+     
+     System.out.println(newLine);      
+      System.out.print((i = stm.niveauStock()) + " = niveau du stock de médicaments 2");      
+    
     
     // Medicaments, recherche un medicament a une place donnee dans un tableau_________________
+    System.out.println(newLine);
     System.out.println("**Medicaments:");
     
-    Medicament medic = new Medicament(1,"a","a","injection","Nausees");
-    medic.afficherMedicament(3);
-    medic.afficherMedicament1(12);
-    medic.listerMedicaments();
+    Medicament medic1 = new Medicament(1,"a","a","injection","Nausees");
+    
+    try{
+    medic1.afficherMedicament(3);
+    medic1.afficherMedicament1(12);
+    }
+    catch (TableauException e){
+      //e.printStackTrace();   
+      System.out.println("Exception : " + e.getMessage());
+    }
+    medic1.listerMedicaments();
     
     //Liste des services___________________________________________
-    System.out.println("**Liste de services :");
+    System.out.println(newLine);
+    System.out.println("Liste de services :");
     Service serv = new Service(1,"Psychologie",3,4);
     serv.AddElementListe();
    
@@ -41,6 +86,7 @@ public class mainHopital {
     Operation operation1 = null;
     
     //Interface SalleRestaurant_________________________________________________
+    System.out.println(newLine);
     System.out.println("**Interface SalleRestaurant :");
     
     Salle salle = creerSalle(10,"Aile Ouest","Conference","09:00","20:00");
@@ -60,6 +106,7 @@ public class mainHopital {
     
         
     //Exception sur date de l'opération (si la date tombe sur un weekend)__________________
+    System.out.println(newLine);
     System.out.println("**Exception sur la date de l'opération :");
     
     try{
@@ -80,6 +127,7 @@ public class mainHopital {
     }   
     
     // Nouveau patient_____________________________________________
+    System.out.println(newLine);
     System.out.println("**Nouveau Patient : ");
     
     System.out.println("Le nouveau/la nouvelle patient(e) s'appelle : " + patient1.getPrenom() + " " + patient1.getNom() + " No.Patient:" + patient1.getNo());
@@ -167,5 +215,30 @@ public class mainHopital {
   
   }
   
-
+ /* public static void afficherStockMedicaments(StockMedicaments stock){
+    if (stock != null){
+      
+        for (String i : stock.listerNomMedicaments()) {
+          System.out.println(i);
+      }
+    }
+    
+  }*/
+  
+  static {
+    //executer au début avant tout le reste - faire des initialisation en dehors de tout
+    System.out.println("Lancement de: ....");
+    compteur = 35;
+    System.out.println("Ceci est un compteur: " + compteur);
+  }
+  
+   {
+     //executer à la création de chaque objet - instanciation du main - appeler quand on fait new
+     System.out.println("*******");
+    System.out.println("création de l'objet: ...."); 
+    compteur += 1;    
+    System.out.println(compteur);
+    System.out.println("*******");
+  }
+  
 }

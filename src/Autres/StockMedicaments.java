@@ -12,10 +12,10 @@ public class StockMedicaments {
   public StockMedicaments(Medicament[] listeMedicaments) {
     for (int i=0; i< listeMedicaments.length; i++){
       this.listeMedicaments.add(listeMedicaments[i]);
+      System.out.println(listeMedicaments[i].getNom());
     } 
   }
 //afficher les médicaments, donner un médicaments
-  //constructeur qui prend un
   
   public StockMedicaments(List<Medicament> listeMedicaments) {    
       this.listeMedicaments = listeMedicaments;     
@@ -23,7 +23,9 @@ public class StockMedicaments {
   
   //add médicament
   public void addMedicament(Medicament medic){
+    if (medic != null){
     listeMedicaments.add(medic);
+    }
   }
   
   public  Medicament removeMedicament(Medicament medic) throws PatientException{
@@ -41,9 +43,13 @@ public class StockMedicaments {
   
   public int niveauStock(){
     return listeMedicaments.size();
-    //nombre de médicament qui restent dans la liste
-    
+    //nombre de médicament qui restent dans la liste    
   }
   
-  //remove medicament
+  /*public static List<String> listeNomMedicament(){
+    List<String> nomMedicaments = new ArrayList<String>();
+  }
+    for (Medicament med : listeMedicaments)*/
+    
+  //}
 }
