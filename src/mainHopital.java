@@ -239,6 +239,11 @@ public class mainHopital {
     compteur += 1;    
     System.out.println(compteur);
     System.out.println("*******");
+    
+    // par Sonja
+    System.out.println("c'est bientot fini");
   }
+   
+  
   
 }
