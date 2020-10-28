@@ -7,7 +7,7 @@ import misc.PatientException;
 
 public class StockMedicaments {
   
-  private  List<Medicament> listeMedicaments = new ArrayList<Medicament>() ;// tableau de medicaments
+  private static  List<Medicament> listeMedicaments = new ArrayList<Medicament>() ;// tableau de medicaments
 
   public StockMedicaments(Medicament[] listeMedicaments) {
     for (int i=0; i< listeMedicaments.length; i++){
@@ -46,10 +46,19 @@ public class StockMedicaments {
     //nombre de médicament qui restent dans la liste    
   }
   
-  /*public static List<String> listeNomMedicament(){
-    List<String> nomMedicaments = new ArrayList<String>();
-  }
-    for (Medicament med : listeMedicaments)*/
+  public static List<String> listerNomMedicament(){
+    List<String> nomMedicaments = new ArrayList<String>();     
     
-  //}
+    for (Medicament med : listeMedicaments){
+      if(med == null){
+        
+      }
+    
+    else {
+      nomMedicaments.add(med.getNom());
+     }
+    }
+    return nomMedicaments;
+  }
+
 }

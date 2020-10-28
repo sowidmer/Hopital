@@ -238,7 +238,7 @@ public class mainHopital {
    {
      //executer ï¿½ la crï¿½ation de chaque objet - instanciation du main - appeler quand on fait new
      System.out.println("*******");
-    System.out.println("crï¿½ation de l'objet: ...."); 
+    System.out.println("création de l'objet: ...."); 
     compteur += 1;    
     System.out.println(compteur);
     System.out.println("*******");
