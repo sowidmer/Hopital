@@ -317,10 +317,15 @@ public class mainHopital {
     System.out.println("c'est bientot fini");
   }
 
+
   // Par Patrice
   private int getNumberOfInstances() {
     System.out.println ("Reading number of instances");
     return 33 ;
   }  
+
+   
+  //petite modif pour rien
+
   
 }
