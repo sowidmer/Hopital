@@ -244,6 +244,6 @@ public class mainHopital {
     System.out.println("c'est bientot fini");
   }
    
-  
+  //petite modif pour rien
   
 }
