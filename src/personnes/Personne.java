@@ -13,35 +13,33 @@ public abstract class Personne  {
   private String dateNaissance;
   private String telephone;
   private String email;
+  
+  public Personne (int no, String nom, String prenom) throws PatientException {
+	  if ((nom == null)) {
+	      throw new PatientException("Nom est null");
+	  }
+	    
+	  if ((nom.trim().length() > 1) && (prenom.trim().length() > 1)) {
+	      this.no = no;
+	      this.nom = nom;
+	      this.prenom = prenom;
+	  }
+	    
+	  else {
+	      this.no = no;
+	      throw new PatientException("Nom invalide pour le patient no.:" + no);
+	  }
+  }
 
   public Personne(int no, String nom, String prenom, String adresse,
       String dateNaissance, String telephone, String email)
       throws PatientException {
-  
-    /*
-     * this.no = no; this.nom = nom; this.prenom = prenom; this.adresse =
-     * adresse; this.dateNaissance = dateNaissance; this.telephone = telephone;
-     * this.email = email;
-     */
-
-    if ((nom == null)) {
-      throw new PatientException("Nom est null");
-    }
-    
-    if ((nom.trim().length() > 1) && (prenom.trim().length() > 1)) {
-      this.no = no;
-      this.nom = nom;
-      this.prenom = prenom;
+	  this(no,nom, prenom);
       this.adresse = adresse;
       this.dateNaissance = dateNaissance;
       this.telephone = telephone;
       this.email = email;
-    }
     
-    else {
-      this.no = no;
-      throw new PatientException("Nom invalide pour le patient no.:" + no);
-    }
   }
 
   public int getNo() {

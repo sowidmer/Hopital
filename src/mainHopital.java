@@ -1,7 +1,14 @@
 import horaires.HoraireTravail;
 import horaires.HorairePause;
+import personnes.ListePersonnes;
+import personnes.Medecin;
 import personnes.Patient;
+import personnes.Personne;
+import personnes.Technicien;
 import local.Chambre;
+
+import java.util.List;
+
 import Autres.Medicament;
 import Autres.Service;
 import Autres.StockMedicaments;
@@ -19,6 +26,7 @@ public class mainHopital {
   private static int compteur = 0;
   static String newLine = System.getProperty("line.separator");
   
+
   public static void main(String[] args) throws Exception {      
     
     // Gestion des horaires
@@ -34,6 +42,53 @@ public class mainHopital {
     j5 = new HoraireTravail(5,"07:30","12:00");
     
     HoraireTravail[] hts = {j1,j2,j3,j4};
+
+	  Medecin m11 = new Medecin(1, "Dro", "Paul");
+	  Medecin m12 = new Medecin(2, "Falui", "Arbert");
+	  Medecin m13 = new Medecin(3, "Gosnak", "Hubert");
+	  //Medecin [] tableauMedecin = {m11, m12, m13};
+	  
+	  //ListePersonnes<Medecin> listeMedecins = new ListePersonnes<Medecin>(tableauMedecin);
+	  ListePersonnes<Medecin> listeMedecins = new ListePersonnes<Medecin>();
+	  //listeMedecins.listerNomPersonnes();
+	  Medecin m14 = new Medecin(4, "Ralt", "Ambroise");
+	  listeMedecins.addPersonne(m14);
+	  
+	  listeMedecins.listerNomPersonnes();
+	  List <String> NomMedecins = listeMedecins.listerNomPersonnes();
+	  System.out.println (NomMedecins);
+	  
+	  System.out.println ("-----------------------------------------------");
+	  System.out.println ("-----------------------------------------------");
+	  
+	  
+	  Technicien t1 = new Technicien(11, "Hald", "Furet");
+	  Technicien t2 = new Technicien(12, "Burf", "Artom");
+	  Technicien t3 = new Technicien(13, "Shield", "Joseph");
+	  Technicien[] tableauTechnicien = {t1, t2, t3};
+	  
+	  ListePersonnes<Technicien> listeTechniciens = new ListePersonnes<Technicien>(tableauTechnicien);
+	  
+	  List <String> NomTechniciens = listeTechniciens.listerNomPersonnes();
+	  System.out.println (NomTechniciens);
+	  Technicien t4 = new Technicien(14, "Rudolf", "Jacques");
+	  listeTechniciens.addPersonne(t4);
+	  NomTechniciens = listeTechniciens.listerNomPersonnes();
+	  System.out.println (NomTechniciens);
+	  
+	  System.out.println ("-----------------------------------------------");
+	  System.out.println ("-----------------------------------------------");
+	  
+	  ListePersonnes<Personne> listePersonnes = new ListePersonnes<Personne>();
+	  
+	 
+	  
+	  System.out.println ("-----------------------------------------------");
+	  System.out.println ("-----------------------------------------------");
+	  
+	  
+	  
+
     
     GestionHoraires gh = new GestionHoraires(hts);
     
