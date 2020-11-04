@@ -12,6 +12,10 @@ public final class HoraireTravail extends Horaire {
     super(no, noEmploye, dateJour, dateDebut, dateFin, debutMatin, finMatin, debutApresMidi,
         finApresMidi);
   }
+  
+  public HoraireTravail(int no, String debutMatin, String finMatin ){
+    super(no, debutMatin, finMatin);
+  }
 
   public float nbrHeuresTravaillees() throws ParseException {
 

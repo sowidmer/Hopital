@@ -33,6 +33,13 @@ public abstract class Horaire {
     this.debutMatin = debutMatin;
   }
 
+  public Horaire(int no, String debutMatin, String finMatin) {
+    this.no = no;
+    this.debutMatin = debutMatin;
+    this.finMatin = finMatin;
+    
+  }
+
   public int getNo() {
     return no;
   }
