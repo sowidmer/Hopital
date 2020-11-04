@@ -27,7 +27,7 @@ public class mainHopital {
     
     String newLine = System.getProperty("line.separator");
     
-    //liste de Medicaments - Stock de médicaments
+    //liste de Medicaments - Stock de mï¿½dicaments
     System.out.println("***Stock de Medicaments");
         
     Medicament m1,m2,m3,m4,m5;
@@ -44,13 +44,13 @@ public class mainHopital {
      
      stm.addMedicament(m5); 
      
-     System.out.print((i = stm.niveauStock()) + " = niveau du stock de médicaments 1");  
+     System.out.print((i = stm.niveauStock()) + " = niveau du stock de mï¿½dicaments 1");  
      
       
      stm.removeMedicament(m4);
      
      System.out.println(newLine);      
-      System.out.print((i = stm.niveauStock()) + " = niveau du stock de médicaments 2");      
+      System.out.print((i = stm.niveauStock()) + " = niveau du stock de mï¿½dicaments 2");      
     
     
     // Medicaments, recherche un medicament a une place donnee dans un tableau_________________
@@ -105,9 +105,9 @@ public class mainHopital {
     afficherInfoSalle(resto);
     
         
-    //Exception sur date de l'opération (si la date tombe sur un weekend)__________________
+    //Exception sur date de l'opï¿½ration (si la date tombe sur un weekend)__________________
     System.out.println(newLine);
-    System.out.println("**Exception sur la date de l'opération :");
+    System.out.println("**Exception sur la date de l'opï¿½ration :");
     
     try{
     
@@ -132,11 +132,11 @@ public class mainHopital {
     
     System.out.println("Le nouveau/la nouvelle patient(e) s'appelle : " + patient1.getPrenom() + " " + patient1.getNom() + " No.Patient:" + patient1.getNo());
     System.out.println("il/elle est dans la chambre No. : " + patient1.getChambre().getNo() + " " + patient1.getChambre().getNom());  
-    System.out.println("il/elle va avoir comme opération : " + patient1.getOperation().getGenre());
+    System.out.println("il/elle va avoir comme opï¿½ration : " + patient1.getOperation().getGenre());
     
-    //calul le nombre d'heures travaillées_______________________________-
+    //calul le nombre d'heures travaillï¿½es_______________________________-
     HoraireTravail ht = new HoraireTravail(1,240,"01/10/2020","02/10/2020", "02/10/2020","08:00","10:15","13:00","18:25");
-    System.out.println("La durée travaillée est: " + ht.nbrHeuresTravaillees());
+    System.out.println("La durï¿½e travaillï¿½e est: " + ht.nbrHeuresTravaillees());
         
     // on redonne des autres valeurs a patient1/chambre1/operation via les setters
     patient1.setNo(171020);
@@ -149,26 +149,26 @@ public class mainHopital {
     patient1.setChambre(chambre1);    
     
     operation1.setNo(32720);
-    operation1.setGenre("Prothèse du genou");
+    operation1.setGenre("Prothï¿½se du genou");
     operation1.setDateSoin("08/10/2020");
     
     patient1.setOperation(operation1);      
     
     System.out.println("L'autre patient(e) s'appelle : " + patient1.getNom() + " No Patient: " + patient1.getNo());
     System.out.println("il/elle est dans la chambre No. : " + patient1.getChambre().getNo() + " " + patient1.getChambre().getNom());  
-    System.out.println("il/elle va avoir comme opération : " + patient1.getOperation().getGenre());
+    System.out.println("il/elle va avoir comme opï¿½ration : " + patient1.getOperation().getGenre());
         
      
      Patient patient3 = new Patient(171416,"Blanc","Albert","Rte de Chavannes 15","10.11.1975","079 122 45 78","a.blanc@ifage.ch");
      
-     System.out.println("3ème patient : " + patient3.getPrenom() + " " + patient3.getNom() + " No Patient:" + patient3.getNo());
+     System.out.println("3ï¿½me patient : " + patient3.getPrenom() + " " + patient3.getNom() + " No Patient:" + patient3.getNo());
      
  
     try { 
       
      Patient patient4 = new Patient(171500,"a   ","Artos","Ch. de Renens 72","","","a@ifage.ch");
      
-     System.out.println("4ème patient (avec Exception) : " + patient4.getPrenom() + " " + patient4.getNom());
+     System.out.println("4ï¿½me patient (avec Exception) : " + patient4.getPrenom() + " " + patient4.getNom());
      
      }
       catch (PatientException pe){
@@ -184,7 +184,7 @@ public class mainHopital {
       } 
     
     HoraireTravail ht1 = new HoraireTravail(1,240,"01/10/2020","02/10/2020","02/10/2020","08:00","10:15","13:00","18:25");
-    System.out.println("Le nombre de minutes travaillées est: " + ht1.nbrHeuresTravaillees());
+    System.out.println("Le nombre de minutes travaillï¿½es est: " + ht1.nbrHeuresTravaillees());
     
     
     HorairePause hp = new HorairePause(2,240,"10/10/2020","10/10/2020","10/10/2020","10:00","07:15","16:00","16:25");
@@ -226,19 +226,20 @@ public class mainHopital {
   }*/
   
   static {
-    //executer au début avant tout le reste - faire des initialisation en dehors de tout
+    //executer au dï¿½but avant tout le reste - faire des initialisation en dehors de tout
     System.out.println("Lancement de: ....");
     compteur = 35;
     System.out.println("Ceci est un compteur: " + compteur);
   }
   
    {
-     //executer à la création de chaque objet - instanciation du main - appeler quand on fait new
+     //executer ï¿½ la crï¿½ation de chaque objet - instanciation du main - appeler quand on fait new
      System.out.println("*******");
-    System.out.println("création de l'objet: ...."); 
+    System.out.println("crï¿½ation de l'objet: ...."); 
     compteur += 1;    
     System.out.println(compteur);
     System.out.println("*******");
+    // grande modification pas courte
   }
   
 }
